@@ -2,9 +2,17 @@
 
 Sample project using **spring-boot-webflux** with **reactor-netty** reactive http client and server. The target of the sample is provide a sample on how to use webflux **@Controller**, **RouterFunction** and **WebClient**.
 
+## Start
+
+To start the sample just run `gradlew bootRun`.
+
+## Server
+
+The server will listen to port `${server.port}`
+
 ### Controller
 
-Sample spring controller that will execute ServerLogic on GET HTTP request.
+Sample spring controller, with mapping `${controller-sample.path}`, that will execute ServerLogic on GET HTTP request.
 
 [SampleController](src/main/java/sample/webflux/http/netty/controller/SampleController.java)
 
@@ -12,7 +20,7 @@ Sample spring controller that will execute ServerLogic on GET HTTP request.
 
 ### Router Function
 
-Sample handler function that will execute ServerLogic on request and sample router function that will route a GET HTTP request to the sample handler.
+Sample handler function that will execute ServerLogic and sample router function that will route a GET HTTP request with path `${router-sample.path}` to the sample handler.
 
 [SampleHandler](src/main/java/sample/webflux/http/netty/component/SampleHandler.java)
 
